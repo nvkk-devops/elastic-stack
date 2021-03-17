@@ -1,0 +1,11 @@
+#------- Monitors other beats in the sytem -------#
+
+# Module: beat
+# Docs: https://www.elastic.co/guide/en/beats/metricbeat/7.11/metricbeat-module-beat.html
+
+- module: beat
+  xpack.enabled: true
+  period: 10s
+  hosts: ["http://localhost:5066"]
+  #username: "user"
+  #password: "secret"

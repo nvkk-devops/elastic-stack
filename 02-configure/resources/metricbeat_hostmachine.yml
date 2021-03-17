@@ -1,0 +1,32 @@
+#---- '/etc/metricbeat/metricbeat.yml' -----#
+
+#----- hostmachine : Amend below entries inside 
+output.elasticsearch:
+  hosts: ["elastic:9200"] # resolve to elastic server from lxc container
+  
+  username: "elastic" # only, security is enabled
+  password: "venkata"
+
+#----- elasticsearch server: configure metricbeat -------#
+metricbeat.config.modules:
+  path: ${path.config}/modules.d/*.xml
+  reload.enabled: true  # for live-reload without metricbeat restart
+
+name: webserver
+tags: ["web-tier"]  # replace old tags
+
+setup.dashboards.enabled: true
+setup.kibana:
+  host: "elastic:5601"
+
+logging.level: debug
+logging.selectors: ["*"]
+logging.to_files: true
+logging.files:
+  path: /var/log/metricbeat
+  name: metricbeat
+  keepfiles: 7
+  permissions: 0644
+
+monitoring.enabled: true
+monitoring.elasticsearch: 

@@ -1,0 +1,11 @@
+#---- /etc/elasticsearch/elasticsearch.yml ----#
+
+# Amend the below entries to make 'ElasticSearch' server to Production mode
+####### Common: For all beats #######
+network.host: 0  # 0.0.0.0
+discovery.type: single-node # if cluster-mode, then refer 'discovery.seed_hosts:'
+
+
+#--------- x-pack monitoring ------------#
+xpack.monitoring.collection.enabled: true
+xpack.monitoring.elasticsearch.collection.enabled: true

@@ -1,0 +1,4 @@
+# Amend the contents to '/etc/filebeat/filebeat.yml'
+
+output.elasticsearch:
+  hosts: ["elastic:9200"] # resolve to elastic server from lxc container

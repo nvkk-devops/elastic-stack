@@ -1,0 +1,6 @@
+#----- /etc/kibana/kibana.yml -----#
+
+# Amend below entries
+
+elasticsearch.username: "kibana"
+elasticsearch.password:  "<pwd>"

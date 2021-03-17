@@ -1,0 +1,3 @@
+#!/bin/bash
+# Sandbox ssh command for simulating ssh into web node
+lxc exec web -- /bin/bash

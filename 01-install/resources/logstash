@@ -1,0 +1,3 @@
+# Add below entries to '/etc/default/logstash'
+
+JAVA_HOME=`which java`   # eg: '/usr/lib/jvm/java-11-openjdk-amd64'

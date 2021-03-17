@@ -1,0 +1,4 @@
+#!/bin/bash
+# Start simulating web traffic
+
+lxc exec web -- sh -c "echo '* * * * * /usr/local/bin/webtest' >> /etc/cron.d/webtest"
